@@ -3,7 +3,7 @@
     <input type="hidden" name="id" value="<?= $record['id'] ?>">
     <ul id="list" class="list-group" style="padding-top:1%">
         <li class="list-group-item"><label class="col-md-2">Marka: </label>
-            <select name="id_brand" class="d-inline"">
+            <select required name="id_brand" class="d-inline"">
             <?php
 
             foreach($brands as $row){
@@ -11,11 +11,11 @@
             }
             ?>
             </select></li>
-        <li class="list-group-item"><label class="col-md-2">Model: </label><input value="<?php echo $record['model'];?>" name="model" class="col-md-5" type="text"></li>
-        <li class="list-group-item"><label class="col-md-2">Rok produkcji: </label><input value="<?php echo $record['production_year'];?>" name="production_year" class="col-md-5" type="text"></li>
-        <li class="list-group-item"><label class="col-md-2">Przebieg: </label><input value="<?php echo $record['mileage'];?>" name="mileage" class="col-md-5" type="text"></li>
+        <li class="list-group-item"><label class="col-md-2">Model: </label><input required value="<?php echo $record['model'];?>" name="model" class="col-md-5" type="text"></li>
+        <li class="list-group-item"><label class="col-md-2">Rok produkcji: </label><input type="number" minlength="4" maxlength="4" required value="<?php echo $record['production_year'];?>" name="production_year" class="col-md-5" type="text"></li>
+        <li class="list-group-item"><label class="col-md-2">Przebieg: </label><input type="number" required value="<?php echo $record['mileage'];?>" name="mileage" class="col-md-5" type="text"></li>
         <li class="list-group-item"><label class="col-md-2">Status: </label>
-            <select onchange="change('id_status')" name="id_status" class="d-inline"">
+            <select required onchange="change('id_status')" name="id_status" class="d-inline"">
             <?php
             foreach($status as $row){
                 echo '<option'.($record['id_status']-1==$row['id']?"selected":"").' value="'.$row["id"].'">'.$row['status'].'</option>';

@@ -28,7 +28,6 @@
                 }
             })
             .then(function(data) {
-                console.log(data)
                 addElementsList(data)
             })
             .catch(function(error) {
@@ -45,7 +44,7 @@
                 }
             })
             .then(function(data) {
-                console.log("Hello PHP");
+                addElementsList(data)
             })
             .catch(function(error) {
                 // Obsłuż błąd żądania
@@ -63,7 +62,7 @@
     }
     ?>
 </select>
-<input class="d-inline" type="number" value="1" min="1" max="<?= ($len+$countRows)/$countRows?>">
+<label class="d-inline">Numer strony</label><input id="NumberPage" onchange="changeNumberPage()" class="d-inline" type="number" value="1" min="1" max="<?= ($len+$countRows)/$countRows?>">
 <a href="/site/add-form"><button>Dodaj</button></a>
 <ul id="list" class="list-group" style="padding-top:1%">
 </ul>
