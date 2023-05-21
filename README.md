@@ -8,6 +8,7 @@ Instrukcja uruchomienia projektu
 	-	Przenieś folder "basic" na swój hosting
 	-	Wgraj zrzut bazy danych na swój hosting
 	-	Wejdź na adres "TwójHosting"/basic/web/
+	-   Zaktualizuj plik basic/config/db.php
 	
 # Uwaga
 
